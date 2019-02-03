@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<!-- meta tag from Nick have no idea what it does -->
+		<meta name="description" content="">
+    	<meta name="author" content="">
+
+		<!-- link to dataTables css file -->
+		<link href="../static/css/jquery.dataTables.css" rel="stylesheet" type="text/css">    
+		<!-- link to bootstrap css files -->
+		<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
+		
+		<script src="../static/js/respond.js"> </script>
+		<!-- Nick's CSS -->
+	    <link href="../static/css/simple-sidebar.css" rel="stylesheet">
+
+	    <link rel="stylesheet" href="../static/css/keen-dashboards.css">
+	    <link rel="stylesheet" href="../static/css/bootstrap-switch.css">
+	    <link rel="stylesheet" href="../static/css/dc.css">
+	    <link rel="stylesheet" href="../static/css/specific.css">
+	    <link rel="stylesheet" href="../static/css/jquery.accordion.css">
+	    <link rel="stylesheet" href="../static/css/nicks_custom.css">
+	    <!-- link to custom css file -->
+		<link href="../static/css/custom.css" rel="stylesheet" type="text/css">
+		<!-- link to custom layout css file -->
+		<link href="../static/css/layout.css" rel="stylesheet" type="text/css">
+		<!-- jquery  -->
+		<script src="../static/js/jquery-1.11.2.min.js"></script>
+  		<script src='../static/js/jquery.accordion.js'></script>
+		
+		<title>Meta_analysis</title>		
+	</head>
+
+	<body>		
+		<div class = "content-container">
+			<!-- top title div -->
+			<div class = "top-block">
+			<span class = "web-title">ALS Meta-Analysis Web Tool</span>
+			</div>
+			<!-- main content div -->
+			<div class = "main-container">
+				<!-- left gene/textarea div -->
+				<div class = "gene-container">	
+					<div class="up_gene_div">
+						<p><b>Consensus Up Genes</b></p>
+						<textarea class="gene_textarea upgene" rows = "6" cols="25" >
+						</textarea>	
+					</div>
+					<div class="dn_gene_div">
+						<p><b>Consensus Down Genes</b></p>
+						<textarea class="gene_textarea dngene" rows = "6" cols="25">
+						</textarea>	  
+					</div>
+					<div class="btn-div">
+						<div class="enrichr-up">
+							<button class="btn btn-default enrichr_btn">
+							<span><img class="enrichr_pic" src="enrichr-icon.png" alt="?"></span>
+							En<font color="red">rich</font>r Up Genes
+							</button>
+						</div>
+						<div class="enrichr-dn">
+							<button class="btn btn-default enrichr_btn">
+							<span><img class="enrichr_pic" src="enrichr-icon.png" alt="?"></span>
+							En<font color="red">rich</font>r Dn Genes
+							</button>
+						</div>
+						<div class="l1000cds-div">
+							<button class="btn btn-warning l1000cds_btn">
+							<span><img src="sigine.png" alt="?" class="l1000cds_pic">L1000CDS<sup>2</sup></span>
+							</button>
+						</div>		
+					</div>
+					<div class = "stats-div">			
+					</div>
+				</div>
+				<!-- right d3 visualization div -->
+				<div class = "vis-container">
+					<!-- <p>This is vis-container</p> -->
+					<div id='svg_div'></div>
+				</div>
+				<div class = 'right-div'>
+					<div class='d3-btn-div'>
+						<button class='btn btn-default btn-reset'>Reset</button>
+					</div>
+					<div class = 'study-info-div'>
+						<h4>Study Info</h4>
+					</div>
+				</div>			 
+			</div>
+			<!-- footer division -->
+			<div class = "footer-div">
+				<div class = "text-container">
+					<p class = "text-muted">
+						Developed by<font color="black"> Weiqing Wang </font>at
+						<a target="_blank" href="http://icahn.mssm.edu/research/labs/maayan-laboratory">Ma'ayan Lab</a>
+						at <a target="_blank" href="http://icahn.mssm.edu/">Icahn School of Medicine at Mount Sinai</a>	
+					</p>
+				</div>
+			</div>		
+		</div>						
+	</body>
+
+	<script type="text/javascript">
+	var gene_array_up = {{study_array_up|tojson|safe}}.join("\n");
+	var d3_json_data = {{d3_json_data|tojson|safe}};
+	// console.log(d3_json_data);
+	var geneUpArray =  {{study_array_up|tojson|safe}};
+	var geneDnArray = {{study_array_dn|tojson|safe}};
+	var gene_array_dn = {{study_array_dn|tojson|safe}}.join("\n");
+	var statsArray = {{statsArray|tojson|safe}};
+	// console.log(statsArray);
+	$(".upgene").val(gene_array_up);
+	$(".dngene").val(gene_array_dn);		
+	</script>
+
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../static/js/bootstrap.js" type="text/javascript"></script>
+	<script src="../static/js/bootstrap-switch.min.js"></script>
+	<script src="../static/js/crossfilter.js"></script>
+	<script src="../static/js/d3.js"></script>
+	<script src="../static/js/dc.js"></script>
+	<script src="../static/js/queue.js"></script>
+	<script src="../static/js/keen.min.js"></script>
+	<script src="../static/js/underscore-min.js"></script>
+	<script src='../static/js/blockUI.js'></script>
+
+	<!-- datatable javascript -->
+	<script src="../static/js/jquery.dataTables.js" type="text/javascript" charset="utf-8"></script>
+	<!-- custom javascript -->
+	<script src="../static/js/custom_javascript.js" type="text/javascript"></script>
+	<!-- Clustergram Scripts -->
+	<script src='../static/js/d3_clustergram.js'></script>
+	<!-- custom template javascript -->
+	<script src="../static/js/template.js" type="text/javascript"></script>
+
+
+
+
+
+
+</html>

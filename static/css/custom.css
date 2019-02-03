@@ -1,0 +1,189 @@
+
+/* This is a custom CSS stylesheet */
+html{
+	height:100%;
+	width:100%;
+}
+
+body{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+.body-container{
+	min-height: 100%;
+	position:relative;
+}
+
+.top-block{
+	background-color: #C9B99A;
+	width:100%;
+	text-align: center;
+}
+
+.main-div{
+	padding-bottom: 60px;
+	margin-top: 6%;
+}
+
+.table-div{
+	padding-left: 3%;
+	padding-right:3%;
+}
+
+.web-title{
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 4em;
+	font-weight: 900;
+	color: #4B3B1C;
+	text-shadow: 1px 2px 5px #E2DFDA;
+}
+
+.footer-div{
+	width:100%;
+	background-color: #EDE9DF;
+	text-align: center;
+	position:absolute;
+	height:60px;
+	bottom:0;
+	left:0;
+	/*margin-top: 2%;*/
+	/*height: 2%;*/
+	/*display: block;*/
+}
+
+.text-container{
+	text-align: center;
+	margin-top:1.5em;
+}
+
+.text-muted{
+	margin-bottom: 0px;
+}
+
+.submit-div{
+	margin-bottom:2%;
+}
+
+
+td.details-control {
+		background: url('http://cdn.flaticon.com/png/256/59385.png') no-repeat center center;
+		background-size: 30%;
+		cursor: pointer;
+}
+tr.shown td.details-control {
+		background: url('http://rajk.eu/wp-content/uploads/2013/03/black_down.png') no-repeat center center;
+		background-size: 40%;
+}
+
+.dataTables_wrapper{
+	margin: 20px 10px;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+	/*padding: 10px 15px;*/
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid black_down;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.dataTables_filter {
+		margin-bottom: 30px;
+}
+
+.childclass td {
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: 1px solid #ddd;
+	/*width: 120px !important;*/
+}
+
+td.GEO_link{
+	text-decoration: underline;
+	color: gray; 
+}
+
+td.GEO_link:hover{
+	cursor: pointer;
+	color: blue;
+}
+
+
+[colspan="12"]{
+	background-color: white;
+}
+
+[role="row"]:hover{
+	cursor: pointer;
+}
+.childclass2 td:nth-child(2){
+	width: 300px;
+	/*background-color: #ddd;*/
+}
+
+#example_length{
+	margin-left: 60px;
+}
+
+#example_filter{
+	margin-right: 60px;
+}
+
+#example_info{
+	margin-left: 60px;
+}
+
+#example_paginate{
+	margin-right: 60px;
+}
+
+button.download_btn{
+	margin-left: 20px;
+}
+
+.btn:focus,
+.btn:active:focus{
+	outline:none;
+}
+
+#submit:focus{
+	background-color: white;
+}
+
+#submit, 
+#clear{
+	width:7em;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.btn-default:focus{
+	background-color: white;
+}
+
+.btn-danger:focus{
+	background-color: #d9534f;
+}
+
+.btn-primary:focus{
+	background-color: #337ab7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+

@@ -1,0 +1,174 @@
+html{
+	height:100%;
+	width:100%;
+}
+
+body{
+	width:100%;
+	height:100%;
+	text-align: center;
+	font-family: 'Droid Sans', sans-serif;
+	margin:0;
+	padding:0;
+	/*display: block;*/
+}
+
+div{
+	display:block;
+}
+
+/*.view-container{
+	width:100%;
+	text-align: center;
+}*/
+
+
+.content-container{
+	text-align: center;	
+	width:100%;
+	min-height:100%;
+	position:relative;
+	padding-bottom: 60px;
+
+}
+
+.main-container{
+	margin-top:3em;
+}
+
+.gene-container{	
+	float:none;
+	text-align: left;
+	width: 250px;
+	height: 100%;
+	display:inline-block;
+	padding:2em 1.3em;
+	margin-bottom: 3em;
+	border:1px solid gray;
+	border-radius: 10px;
+}
+
+.vis-container{
+	display: inline-block;
+	width: 55%;
+	vertical-align: top;
+	margin-left:1.3em;
+}
+
+.right-div{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 7%;
+	width: 270px;
+	margin-left: 1.3em;
+}
+
+.d3-btn-div{
+	text-align: center;
+}
+
+.study-info-div{
+	text-align: left;
+	height: 310px;
+	margin-top: 3em;
+	padding: 1.2em; 
+	border:1px solid gray;
+	border-radius: 10px;
+}
+
+.study-info-div h4 {
+	text-align: center;
+	margin-bottom: 1.2em;
+}
+
+
+.up_gene_div{
+	display: block;
+	width: 100%;
+	/*left: 100px;*/
+
+}
+
+.dn_gene_div{
+	display: block;
+	/*position: relative;*/
+	margin-top: 1.5em;
+	/*margin-left: 5%;*/
+	/*float:left;*/
+	width: 100%;
+
+}
+
+.btn-div{
+	/*margin-left: 5%;*/
+	margin-top: 1.5em;
+	/*text-align: center;*/
+	/*float:left;*/
+	display:block;
+	width: 100%;	
+}
+
+.stats-div{
+	/*margin-left: 5%;*/
+	margin-top: 1.5em;
+	/*text-align: center;*/
+	/*float:left;*/
+	display:block;
+	width: 100%;
+}
+
+.enrichr_btn:hover{
+	background-color: white;
+	border-color: blue;
+}
+
+.enrichr_btn{
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1.2em;
+	height:35px;
+	width:195px;
+	margin-bottom:5px;
+	/*padding:15px 3px;	*/
+}
+
+.l1000cds_btn{
+	height:35px;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1.2em;
+	width:195px;
+	/*padding: 20px 3px;*/
+}
+
+.btn-reset{
+	width:7em;
+}
+
+.btn-default:focus,
+.btn-default.focus{
+	background-color: white;
+}
+
+.enrichr_pic{
+	width:21px;
+	height:22px;
+	margin-left:-6px;
+	margin-right:4px;
+	margin-top:-3px;
+}
+
+.l1000cds_pic{
+	width:20px;
+	height:21px;
+	margin-left:-4px;
+	margin-right:15px;
+}
+
+#svg_div{
+	position:relative;
+	left: 0;
+	text-align: center;
+}
+
+.col_label_click{
+	cursor: pointer;
+}
